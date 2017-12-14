@@ -16,3 +16,8 @@ php_value post_max_size 64M
 php_value memory_limit 400M
 php_value max_execution_time 180
 php_value max_input_time 180
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^dieucay.cf [NC]
+RewriteRule ^(.*)$ http://www.dieucay.cf/$1 [L,R=301]
+
